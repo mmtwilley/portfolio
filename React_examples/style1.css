@@ -1,0 +1,13 @@
+#box{
+    border: solid;  
+    display:'flex';
+    align-items:'center';
+    justifyContent: center;
+
+    
+}
+
+
+h1{
+    text-align: center;
+}
