@@ -1,43 +1,44 @@
-var ninja = {name:"kevin"}
-// object literal 
-
-var ninjaArray = new Array;
-
-ninjaArray.push = ({weapon:"katana"});
-// Adds a new object to an array
-
-ninja.atkData = {element:"water"}
-// Assigns a new object as a property of another object
-
-console.log(ninja)
-
-console.log(ninjaArray)
+// // Playing with the rest parameter
 
 
-function useless(ninjaCallback) {
-    return ninjaCallback();
+// var sum = (...inputs) => {
+//     let sum = 0;
+//     for(i of inputs){
+//         sum += i
+//     }
+//     return sum;
+// }
+
+// console.log(sum(10,14,55))
+
+// function getSamurai(samurai){
+//     "use strict"
+  
+//     arguments[0] = "Ishida";
+  
+//     return samurai;
+//   }
+  
+//   function getNinja(ninja){
+//     arguments[0] = "Fuma";
+//     return ninja;
+//   }
+  
+//   var samurai = getSamurai("Toyotomi");
+//   var ninja = getNinja("Yoshi");
+  
+//   console.log(samurai)
+//   console.log(ninja)
+
+
+  function whoAmI1(){
+    "use strict";
+    return this;
   }
-
-
-  var text = "Domo arigato!";
-  report("Before defining functions");
   
-  function useless(ninjaCallback) {
-    report("In useless function");
-    return ninjaCallback();
+  function whoAmI2(){
+    return this;
   }
   
-  function getText() {
-    report("In getText function");
-    return text;
-  }
-  
-  report("Before making all the calls");
-  
-  assert(useless(getText) === text,
-         "The useless function works! " + text);
-  
-  report("After the calls have been made");
-  
-  
-  
+  assert(whoAmI1() === window, "Window?");
+  assert(whoAmI2() === window, "Window?");
